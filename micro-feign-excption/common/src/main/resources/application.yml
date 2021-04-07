@@ -1,0 +1,15 @@
+feign:
+  hystrix:
+    # ∆Ù”√ feign client »€∂œ∆˜
+    enabled: true
+
+  connectTimeoutMillis: 50000
+  readTimeoutMillis: 100000
+  compression:
+    request:
+      mime-types:
+        - text/xml
+        - application/xml
+        - application/json
+        - text/plain
+      min-request-size: 1
