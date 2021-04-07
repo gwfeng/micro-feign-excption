@@ -1,1 +1,4 @@
 # micro-feign-excption
+
+Spring Cloud微服务如何设计异常处理机制
+自定义FeignErrorDecoder,对feignException进行重新封装成本地异常ServiceException，然后在全局异常中进行拦截ServiceException，需要说明的是，拦截的本地ServiceException异常httpStatus设置成200，前端通过业务中的code进行判断业务接口是否成功，这样就对微服务直接的调用异常以及本地异常进行了全局统一处理。
